@@ -1,0 +1,25 @@
+identity:
+  name: read
+  author: fujita-h
+  label:
+    en_US: OCR
+description:
+  human:
+    en_US: OCR is a machine-learning-based technique for extracting text from in-the-wild and non-document images like product labels, user-generated images, screenshots, street signs, and posters.
+    ja_JP: 画像のOCRは、製品のラベル、ユーザーが生成した画像、スクリーンショット、道路標識、ポスターなど、整えられていない、ドキュメント以外の画像からテキストを抽出します。
+  llm: OCR is a machine-learning-based technique for extracting text from in-the-wild and non-document images like product labels, user-generated images, screenshots, street signs, and posters.
+parameters:
+  - name: file
+    type: file
+    required: true
+    label:
+      en_US: Image File
+      ja_JP: 画像ファイル
+    human_description:
+      en_US: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+      ja_JP: 解析する画像ファイル。対応形式は JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, MPO です。
+    llm_description: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+    form: llm
+extra:
+  python:
+    source: tools/read.py

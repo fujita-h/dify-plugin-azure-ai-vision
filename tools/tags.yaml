@@ -1,0 +1,26 @@
+identity:
+  name: tags
+  author: fujita-h
+  label:
+    en_US: Tags
+    ja_JP: タグ
+description:
+  human:
+    en_US: The tags feature returns content tags for thousands of recognizable objects, living beings, scenery, and actions that appear in images.
+    ja_JP: タグ機能は、画像に表示される認識可能なオブジェクト、生物、風景、およびアクションに対するコンテンツタグを返します。
+  llm: The tags feature returns content tags for thousands of recognizable objects, living beings, scenery, and actions that appear in images.
+parameters:
+  - name: file
+    type: file
+    required: true
+    label:
+      en_US: Image File
+      ja_JP: 画像ファイル
+    human_description:
+      en_US: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+      ja_JP: 解析する画像ファイル。対応形式は JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, MPO です。
+    llm_description: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+    form: llm
+extra:
+  python:
+    source: tools/tags.py

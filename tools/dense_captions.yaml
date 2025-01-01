@@ -1,0 +1,26 @@
+identity:
+  name: dense_captions
+  author: fujita-h
+  label:
+    en_US: Dense Captions
+    ja_JP: 高密度キャプション
+description:
+  human:
+    en_US: Dense Captions provides more detail by generating one-sentence descriptions of up to 10 different regions of the image in addition to describing the whole image. 
+    ja_JP: 高密度キャプションを使用すると、画像全体の説明に加えて、画像の最大10個の異なる領域について1文の説明が生成され、より詳細な情報が提供されます。 
+  llm: Dense Captions provides more detail by generating one-sentence descriptions of up to 10 different regions of the image in addition to describing the whole image. 
+parameters:
+  - name: file
+    type: file
+    required: true
+    label:
+      en_US: Image File
+      ja_JP: 画像ファイル
+    human_description:
+      en_US: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+      ja_JP: 解析する画像ファイル。対応形式は JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, MPO です。
+    llm_description: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+    form: llm
+extra:
+  python:
+    source: tools/dense_captions.py

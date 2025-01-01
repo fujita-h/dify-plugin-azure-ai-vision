@@ -1,0 +1,26 @@
+identity:
+  name: objects
+  author: fujita-h
+  label:
+    en_US: Object Detection
+    ja_JP: オブジェクト検出
+description:
+  human:
+    en_US: Object detection returns the bounding box coordinates (in pixels) for each object found in the image. For example, if an image contains a dog, cat, and person, the object detection operation lists those objects with their coordinates in the image.
+    ja_JP: オブジェクトの検出はイメージに検出された各オブジェクトの境界ボックスの座標 (ピクセル単位) を返します。 たとえば犬、猫、人物が画像に含まれている場合、オブジェクト検出操作は、それらのオブジェクトと共にそれに対応する座標をその画像に示します。
+  llm: Object detection returns the bounding box coordinates (in pixels) for each object found in the image. For example, if an image contains a dog, cat, and person, the object detection operation lists those objects with their coordinates in the image.
+parameters:
+  - name: file
+    type: file
+    required: true
+    label:
+      en_US: Image File
+      ja_JP: 画像ファイル
+    human_description:
+      en_US: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+      ja_JP: 解析する画像ファイル。対応形式は JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, MPO です。
+    llm_description: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+    form: llm
+extra:
+  python:
+    source: tools/objects.py

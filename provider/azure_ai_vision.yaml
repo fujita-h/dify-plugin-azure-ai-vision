@@ -1,0 +1,41 @@
+identity:
+  author: fujita-h
+  name: azure_ai_vision
+  label:
+    en_US: Azure AI Vision
+  description:
+    en_US: Discover computer vision insights from image and video analysis with OCR and AI
+    ja_JP: OCR と AI を使用して、画像とビデオの分析からコンピューター ビジョンの分析情報を検出します。
+  icon: 00792-icon-service-Computer-Vision.svg
+credentials_for_provider:
+  azure_ai_vision_api_endpoint:
+    type: text-input
+    required: true
+    label:
+      en_US: API Endpoint
+      ja_JP: APIエンドポイント
+    placeholder:
+      en_US: Enter your API Endpoint
+      ja_JP: APIエンドポイントを入力
+    url: https://portal.azure.com
+  azure_ai_vision_api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Key
+      ja_JP: APIキー
+    placeholder:
+      en_US: Enter your API Key
+      ja_JP: APIキーを入力
+    url: https://portal.azure.com
+tools:
+  - tools/caption.yaml
+  - tools/dense_captions.yaml
+  - tools/objects.yaml
+  - tools/people.yaml
+  - tools/read.yaml
+  - tools/smart_crops.yaml
+  - tools/tags.yaml
+extra:
+  python:
+    source: provider/azure_ai_vision.py

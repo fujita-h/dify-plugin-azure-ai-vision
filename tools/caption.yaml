@@ -1,0 +1,26 @@
+identity:
+  name: caption
+  author: fujita-h
+  label:
+    en_US: Caption
+    ja_JP: キャプション
+description:
+  human:
+    en_US: The Caption feature generates a one-sentence description of all the image contents.
+    ja_JP: キャプション機能は、画像コンテンツに対して1つの説明文を生成します。
+  llm: The Caption feature generates a one-sentence description of all the image contents.
+parameters:
+  - name: file
+    type: file
+    required: true
+    label:
+      en_US: Image File
+      ja_JP: 画像ファイル
+    human_description:
+      en_US: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+      ja_JP: 解析する画像ファイル。対応形式は JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, MPO です。
+    llm_description: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+    form: llm
+extra:
+  python:
+    source: tools/caption.py

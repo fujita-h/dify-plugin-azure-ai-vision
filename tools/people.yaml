@@ -1,0 +1,26 @@
+identity:
+  name: people
+  author: fujita-h
+  label:
+    en_US: People Detection
+    ja_JP: 人物検出
+description:
+  human:
+    en_US: People detection offers the ability to detect people appearing in images. The bounding box coordinates of each detected person are returned, along with a confidence score.
+    ja_JP: 人物検出機能では、画像に表示された人物を検出できます。 検出された各人物の境界ボックスの座標が、信頼度スコアと共に返されます。
+  llm: People detection offers the ability to detect people appearing in images. The bounding box coordinates of each detected person are returned, along with a confidence score.
+parameters:
+  - name: file
+    type: file
+    required: true
+    label:
+      en_US: Image File
+      ja_JP: 画像ファイル
+    human_description:
+      en_US: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+      ja_JP: 解析する画像ファイル。対応形式は JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, MPO です。
+    llm_description: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
+    form: llm
+extra:
+  python:
+    source: tools/people.py

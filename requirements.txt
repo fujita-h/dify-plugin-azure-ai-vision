@@ -1,0 +1,2 @@
+dify_plugin
+azure-ai-vision-imageanalysis==1.0.0
