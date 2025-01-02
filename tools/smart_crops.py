@@ -1,6 +1,6 @@
 import io
 from collections.abc import Generator
-from typing import Any
+from typing import Any, List
 
 from azure.ai.vision.imageanalysis import ImageAnalysisClient
 from azure.ai.vision.imageanalysis.models import VisualFeatures
@@ -36,12 +36,24 @@ class ReadTool(Tool):
         if not file:
             raise ValueError("File is required")
 
+        # Get aspect ratios
+        smartcrops_aspect_ratios_param: str | None = tool_parameters.get("smartcrops_aspect_ratios") or None
+        smartcrops_aspect_ratios: List[float] | None = None
+        try:
+            if smartcrops_aspect_ratios_param is not None and smartcrops_aspect_ratios_param.strip():
+                smartcrops_aspect_ratios = [
+                    float(ratio.strip()) for ratio in smartcrops_aspect_ratios_param.strip().split(",")
+                ]
+        except Exception as e:
+            raise ValueError("Invalid smartcrops_aspect_ratios") from e
+
         # Analyze image
         try:
             file_binary = io.BytesIO(file.blob)
             result = client._analyze_from_image_data(
                 image_data=file_binary.getvalue(),
                 visual_features=[VisualFeatures.SMART_CROPS],
+                smart_crops_aspect_ratios=smartcrops_aspect_ratios,
             )
             yield self.create_json_message(result.as_dict())
 

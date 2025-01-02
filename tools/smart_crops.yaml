@@ -21,6 +21,17 @@ parameters:
       ja_JP: 解析する画像ファイル。対応形式は JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, MPO です。
     llm_description: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
     form: llm
+  - name: smartcrops_aspect_ratios
+    type: string
+    required: false
+    label:
+      en_US: Smart-Crops Aspect Ratios
+      ja_JP: スマートトリミングのアスペクト比
+    human_description:
+      en_US: A list of aspect ratios to use for smartCrops feature. Aspect ratios are calculated by dividing the target crop width by the height. Supported values are between 0.75 and 1.8 (inclusive). Multiple values should be comma-separated. If this parameter is not specified, the service will return one crop suggestion with an aspect ratio it sees fit between 0.5 and 2.0 (inclusive).
+      ja_JP: スマートトリミングに使用する縦横比の一覧。 縦横比は、ターゲットのトリミング幅を高さで割ることによって計算されます。 サポートされている値は、0.75 から 1.8 (含む) の間です。 複数の値を指定する場合は、カンマ区切りにする必要があります。 このパラメーターを指定しない場合、サービスは、縦横比が 0.5 ~ 2.0 (両端を含む) のトリミング候補を 1 つ返します。
+    llm_description: A list of aspect ratios to use for smartCrops feature. Aspect ratios are calculated by dividing the target crop width by the height. Supported values are between 0.75 and 1.8 (inclusive). Multiple values should be comma-separated. If this parameter is not specified, the service will return one crop suggestion with an aspect ratio it sees fit between 0.5 and 2.0 (inclusive).
+    form: form
 extra:
   python:
     source: tools/smart_crops.py
