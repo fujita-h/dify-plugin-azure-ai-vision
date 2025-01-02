@@ -21,6 +21,17 @@ parameters:
       ja_JP: 解析する画像ファイル。対応形式は JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, MPO です。
     llm_description: The image file to anallyze. Supported file type is JPEG, PNG, GIF, BMP, WEBP, ICO, TIFF, or MPO.
     form: llm
+  - name: language
+    type: string
+    required: false
+    label:
+      en_US: Language
+      ja_JP: 言語
+    human_description:
+      en_US: The language of output generation. This parameter has some restrictions and does not need to be specified except in special cases.
+      ja_JP: 出力生成の言語。このパラメータにはいくつかの制限があります。特別な場合を除き、指定する必要はありません。
+    llm_description: The language of output generation. This parameter has some restrictions and does not need to be specified except in special cases.
+    form: form
 extra:
   python:
     source: tools/caption.py

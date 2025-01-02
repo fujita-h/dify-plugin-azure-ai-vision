@@ -36,12 +36,16 @@ class ReadTool(Tool):
         if not file:
             raise ValueError("File is required")
 
+        # Get language
+        language = tool_parameters.get("language") or None
+
         # Analyze image
         try:
             file_binary = io.BytesIO(file.blob)
             result = client._analyze_from_image_data(
                 image_data=file_binary.getvalue(),
                 visual_features=[VisualFeatures.OBJECTS],
+                language=language,
             )
             yield self.create_json_message(result.as_dict())
 
