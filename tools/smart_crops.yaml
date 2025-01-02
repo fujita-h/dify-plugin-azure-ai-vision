@@ -2,13 +2,13 @@ identity:
   name: smart_crops
   author: fujita-h
   label:
-    en_US: Smart-Cropped Thumbnails
-    ja_JP: スマートトリミングサムネイル
+    en_US: Smart-Cropping
+    ja_JP: スマートトリミング
 description:
   human:
-    en_US: A thumbnail is a reduced-size representation of an image. Thumbnails are used to represent images and other data in a more economical, layout-friendly way. The Azure AI Vision 4.0 API uses smart cropping to create intuitive image thumbnails that include the most important regions of an image with priority given to any detected faces.
-    ja_JP: サムネイルは、画像のサイズを縮小したものです。 無駄のないレイアウトしやすい方法で画像やその他のデータを表現するためにサムネイルは使用されます。 Azure AI Vision 4.0 API では、スマート クロップを使用して、検出された顔に優先順位を付けた画像の最も重要な領域を含む直感的な画像サムネイルを作成します。
-  llm: A thumbnail is a reduced-size representation of an image. Thumbnails are used to represent images and other data in a more economical, layout-friendly way. The Azure AI Vision 4.0 API uses smart cropping to create intuitive image thumbnails that include the most important regions of an image with priority given to any detected faces.
+    en_US: Smart-Cropping is a reduced-size representation of an image. Smart-Cropping are used to represent images and other data in a more economical, layout-friendly way. The Azure AI Vision 4.0 API uses smart cropping to create intuitive image thumbnails that include the most important regions of an image with priority given to any detected faces.
+    ja_JP: スマートトリミングは、画像のサイズを縮小したものです。 無駄のないレイアウトしやすい方法で画像やその他のデータを表現するためにスマートトリミングは使用されます。 Azure AI Vision 4.0 API では、スマート クロップを使用して、検出された顔に優先順位を付けた画像の最も重要な領域を含む直感的な画像サムネイルを作成します。
+  llm: Smart-Cropping is a reduced-size representation of an image. Smart-Cropping are used to represent images and other data in a more economical, layout-friendly way. The Azure AI Vision 4.0 API uses smart cropping to create intuitive image thumbnails that include the most important regions of an image with priority given to any detected faces.
 parameters:
   - name: file
     type: file
