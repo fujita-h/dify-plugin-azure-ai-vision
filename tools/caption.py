@@ -39,6 +39,9 @@ class ReadTool(Tool):
         # Get language
         language = tool_parameters.get("language") or None
 
+        # Get gender neutral flag
+        gender_neutral_caption: bool = tool_parameters.get("gender_neutral_caption") or False
+
         # Analyze image
         try:
             file_binary = io.BytesIO(file.blob)
@@ -46,6 +49,7 @@ class ReadTool(Tool):
                 image_data=file_binary.getvalue(),
                 visual_features=[VisualFeatures.CAPTION],
                 language=language,
+                gender_neutral_caption=gender_neutral_caption,
             )
             yield self.create_json_message(result.as_dict())
 

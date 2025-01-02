@@ -32,6 +32,18 @@ parameters:
       ja_JP: 出力生成の言語。このパラメータにはいくつかの制限があります。特別な場合を除き、指定する必要はありません。
     llm_description: The language of output generation. This parameter has some restrictions and does not need to be specified except in special cases.
     form: form
+  - name: gender_neutral_caption
+    type: boolean
+    required: false
+    label:
+      en_US: Gender Neutral Caption
+      ja_JP: 性別に依存しないキャプション
+    human_description:
+      en_US: Boolean flag for enabling gender-neutral captioning for caption and dense captions. If this parameter is not specified, the default value is "false".
+      ja_JP: キャプションと高密度キャプションに対して性別に依存しないキャプションを有効にするフラグ。 このパラメーターを指定しない場合、既定値は "false" です。
+    llm_description: Boolean flag for enabling gender-neutral captioning for caption and dense captions. If this parameter is not specified, the default value is "false".
+    default: false
+    form: form
 extra:
   python:
     source: tools/dense_captions.py
