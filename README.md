@@ -6,14 +6,14 @@
 ![GitHub Release](https://img.shields.io/github/v/release/fujita-h/dify-plugin-azure-ai-vision)
 ![GitHub License](https://img.shields.io/github/license/fujita-h/dify-plugin-azure-ai-vision)
 
-This extension provides a set of Azure AI Vision services.
+This plugin provides tools for image analysis with OCR and AI using Azure AI Vision.
 
 > [!IMPORTANT]  
 > This plugin requires an Azure subscription. If you don't have an Azure subscription, create a free account before you begin. Learn more about the free trial [here](https://azure.microsoft.com/free/).
 
 ## Tools provided by this plugin
 
-Discover computer vision insights from image and video analysis with OCR and AI.
+Discover computer vision insights from image analysis with OCR and AI.
 
 ### Caption
 

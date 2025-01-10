@@ -5,8 +5,8 @@ name: azure_ai_vision
 label:
   en_US: Azure AI Vision
 description:
-  en_US: Discover computer vision insights from image and video analysis with OCR and AI
-  ja_JP: OCR と AI を使用して、画像とビデオの分析からコンピューター ビジョンの分析情報を検出します。
+  en_US: Discover computer vision insights from image analysis with OCR and AI
+  ja_JP: OCR と AI を使用して、画像の分析からコンピューター ビジョンの分析情報を検出します。
 icon: 00792-icon-service-Computer-Vision.svg
 resource:
   memory: 268435456
