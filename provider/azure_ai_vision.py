@@ -11,8 +11,8 @@ from dify_plugin.errors.tool import ToolProviderCredentialValidationError
 class AzureAiVisionProvider(ToolProvider):
     def _validate_credentials(self, credentials: dict[str, Any]) -> None:
         try:
-            api_endpoint = credentials.get("azure_ai_vision_api_endpoint")
-            api_key = credentials.get("azure_ai_vision_api_key")
+            api_endpoint = credentials.get("api_endpoint")
+            api_key = credentials.get("api_key")
 
             # Ensure API key and endpoint are provided
             if not api_key:

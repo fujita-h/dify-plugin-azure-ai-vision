@@ -10,7 +10,7 @@ description:
     ja_JP: タグ機能は、画像に表示される認識可能なオブジェクト、生物、風景、およびアクションに対するコンテンツタグを返します。
   llm: The tags feature returns content tags for thousands of recognizable objects, living beings, scenery, and actions that appear in images.
 parameters:
-  - name: file
+  - name: input_file
     type: file
     required: true
     label:

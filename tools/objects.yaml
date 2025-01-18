@@ -10,7 +10,7 @@ description:
     ja_JP: オブジェクトの検出はイメージに検出された各オブジェクトの境界ボックスの座標 (ピクセル単位) を返します。 たとえば犬、猫、人物が画像に含まれている場合、オブジェクト検出操作は、それらのオブジェクトと共にそれに対応する座標をその画像に示します。
   llm: Object detection returns the bounding box coordinates (in pixels) for each object found in the image. For example, if an image contains a dog, cat, and person, the object detection operation lists those objects with their coordinates in the image.
 parameters:
-  - name: file
+  - name: input_file
     type: file
     required: true
     label:

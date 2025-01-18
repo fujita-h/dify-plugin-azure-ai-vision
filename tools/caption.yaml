@@ -10,7 +10,7 @@ description:
     ja_JP: キャプション機能は、画像コンテンツに対して1つの説明文を生成します。
   llm: The Caption feature generates a one-sentence description of all the image contents.
 parameters:
-  - name: file
+  - name: input_file
     type: file
     required: true
     label:

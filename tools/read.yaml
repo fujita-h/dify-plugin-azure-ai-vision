@@ -9,7 +9,7 @@ description:
     ja_JP: 画像のOCRは、製品のラベル、ユーザーが生成した画像、スクリーンショット、道路標識、ポスターなど、整えられていない、ドキュメント以外の画像からテキストを抽出します。
   llm: OCR is a machine-learning-based technique for extracting text from in-the-wild and non-document images like product labels, user-generated images, screenshots, street signs, and posters.
 parameters:
-  - name: file
+  - name: input_file
     type: file
     required: true
     label:

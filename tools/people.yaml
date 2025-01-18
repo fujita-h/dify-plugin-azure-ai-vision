@@ -10,7 +10,7 @@ description:
     ja_JP: 人物検出機能では、画像に表示された人物を検出できます。 検出された各人物の境界ボックスの座標が、信頼度スコアと共に返されます。
   llm: People detection offers the ability to detect people appearing in images. The bounding box coordinates of each detected person are returned, along with a confidence score.
 parameters:
-  - name: file
+  - name: input_file
     type: file
     required: true
     label:

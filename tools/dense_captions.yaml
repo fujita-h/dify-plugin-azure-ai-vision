@@ -10,7 +10,7 @@ description:
     ja_JP: 高密度キャプションを使用すると、画像全体の説明に加えて、画像の最大10個の異なる領域について1文の説明が生成され、より詳細な情報が提供されます。 
   llm: Dense Captions provides more detail by generating one-sentence descriptions of up to 10 different regions of the image in addition to describing the whole image. 
 parameters:
-  - name: file
+  - name: input_file
     type: file
     required: true
     label:

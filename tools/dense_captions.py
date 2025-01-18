@@ -16,8 +16,8 @@ class ReadTool(Tool):
             raise Exception("Tool runtime or credentials are missing")
 
         # Get endpoint and api key
-        api_endpoint = str(self.runtime.credentials.get("azure_ai_vision_api_endpoint"))
-        api_key = str(self.runtime.credentials.get("azure_ai_vision_api_key"))
+        api_endpoint = str(self.runtime.credentials.get("api_endpoint"))
+        api_key = str(self.runtime.credentials.get("api_key"))
 
         # Ensure API key and endpoint are provided
         if not api_key:
@@ -32,7 +32,7 @@ class ReadTool(Tool):
         )
 
         # Get file
-        file = tool_parameters.get("file")
+        file = tool_parameters.get("input_file")
         if not file:
             raise ValueError("File is required")
 
